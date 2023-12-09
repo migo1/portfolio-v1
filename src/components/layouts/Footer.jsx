@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
-import { FiGithub, FiLinkedin, FiGlobe } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { FaAngellist } from "react-icons/fa";
 
 function Footer() {
@@ -19,38 +19,42 @@ function Footer() {
         </div>
         <div className="flex justify-center items-center gap-5 text-newGray md:justify-start dark:text-white">
           <a
-            href="https://www.linkedin.com/in/tochinodev/"
+            href="https://www.linkedin.com/in/robertmigot/"
             rel="noreferrer"
             target="_blank"
-            className="text-2xl hover:text-newDarkYello">
+            className="text-2xl hover:text-newDarkYello"
+          >
             <FiLinkedin />
           </a>
           <a
-            href="https://github.com/ticoniq"
+            href="https://github.com/migo1"
             rel="noreferrer"
             target="_blank"
-            className="text-2xl hover:text-newDarkYello">
+            className="text-2xl hover:text-newDarkYello"
+          >
             <FiGithub />
           </a>
-          <a
+          {/* <a
             href="https://tochidev.com"
             target="_blank"
             rel="noreferrer"
             className="text-2xl hover:text-newDarkYello">
             <FiGlobe />
-          </a>
+          </a> */}
           <a
-            href="https://wellfound.com/u/tochi-okolie"
+            href="https://wellfound.com/u/robertmigot"
             rel="noreferrer"
             target="_blank"
-            className="text-2xl hover:text-newDarkYello">
+            className="text-2xl hover:text-newDarkYello"
+          >
             <FaAngellist />
           </a>
         </div>
         <div>
           <button
             className="flex gap-3 items-center justify-center rounded-md p-2.5 text-gray-700 ml-4 dark:text-white"
-            onClick={handleScrollToTop}>
+            onClick={handleScrollToTop}
+          >
             <span className="sr-only">Back to Top</span>
             Back to Top
             <ArrowUpIcon className="w-5" aria-hidden="true" />

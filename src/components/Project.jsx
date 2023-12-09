@@ -8,74 +8,77 @@ import {
 } from "@heroicons/react/24/outline";
 import { LiaEnvelopeSolid } from "react-icons/lia";
 
-import leaderboard from "../assets/images/leaderboard.jpg";
-import portfolio from "../assets/images/portfolio.jpg";
-import bookstore from "../assets/images/bookstore.jpg";
-import cryptoniq from "../assets/images/cryptoniq.jpg";
-import weather from "../assets/images/weather.jpg";
+
 import budget from "../assets/images/budget.jpg";
+import pba from "../assets/images/projects/pba.png";
+import cobben from "../assets/images/projects/cobben.png";
+import basketball from "../assets/images/projects/basketball.png";
+import dnote from "../assets/images/projects/dnote.png";
+import wholesale from "../assets/images/projects/wholesale.png";
+
+
 
 function Project() {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: "Leaderboard",
-      image: leaderboard,
-      details:
-        "Leaderboard is a way to track the performance of teams in a competitive environment. It is displayed as a list, with the teams ranked by their scores. Leaderboards provide a sense of accomplishment, and to create a sense of community. ",
-      techStack: "HTML, CSS, JavaScript, Web-Pack",
-      live: "https://leaderboard-5318etbmg-ticoniq.vercel.app",
-      source: "https://github.com/ticoniq/Leaderboard",
+      title: "Budget Tracker",
+      image: budget,
+      details: "",
+      // "Leaderboard is a way to track the performance of teams in a competitive environment. It is displayed as a list, with the teams ranked by their scores. Leaderboards provide a sense of accomplishment, and to create a sense of community. ",
+      techStack: "Tailwind Css, Ruby on Rails, Rspec, Postgresql ",
+      live: "#",
+      source: "https://github.com/migo1/Budget-App",
     },
     {
       id: 2,
-      title: "Portfolio Template",
-      image: portfolio,
-      details:
-        "Portfolio template is designed to be user-friendly and easy to navigate. You can learn more about me and my work by exploring the different sections, including my projects, work experience, and education.",
-      techStack: "HTML, CSS, JavaScript",
-      live: "https://portfolio-ticoniq.vercel.app",
-      source: "https://github.com/ticoniq/Portfolio",
+      title: "Pro Basketball",
+      image: pba,
+      details: "",
+      // "Portfolio template is designed to be user-friendly and easy to navigate. You can learn more about me and my work by exploring the different sections, including my projects, work experience, and education.",
+      techStack: "Laravel, Tailwind, Vue",
+      live: "https://pbakenya.com/",
+      source: "#",
     },
     {
       id: 3,
-      title: "Bookstore",
-      image: bookstore,
-      details:
-        "bookstore React JS project is a web application that allows users to browse and purchase books. The project can be built using React JS, a JavaScript library for building user interfaces.",
+      title: "NBA Stats",
+      image: basketball,
+      details: "",
+      // "bookstore React JS project is a web application that allows users to browse and purchase books. The project can be built using React JS, a JavaScript library for building user interfaces.",
       techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
-      live: "https://bookstore-theta-flax.vercel.app",
-      source: "https://github.com/ticoniq/bookstore",
+      live: "https://nba-teams-stats.vercel.app/",
+      source: "https://github.com/migo1/nba-teams-stats",
     },
     {
       id: 4,
-      title: "Cryptoniq",
-      image: cryptoniq,
-      details:
-        "Cryptoniq is a web application that displays up-to-date market cap data for the top 10 cryptocurrencies. It provides an easy overview of the overall crypto market's performance.",
-      techStack: "ReactJS, Redux, Route, Tailwind CSS, DaisyUI, API",
-      live: "https://cryptoniq.vercel.app",
-      source: "https://github.com/ticoniq/cryptoniq",
+      title: "Dnote",
+      image: dnote,
+      details: "",
+      // "Cryptoniq is a web application that displays up-to-date market cap data for the top 10 cryptocurrencies. It provides an easy overview of the overall crypto market's performance.",
+      techStack: "Vue, Tailwind css, Vuex, Laravel",
+      live: "https://dnote.co.ke/",
+      source: "#",
     },
     {
       id: 5,
-      title: "Weather JS",
-      image: weather,
-      details:
-        "weather web application made using HTML5, CSS3, and JavaScript. It's working process is simple. It takes the name of the City as input from the -user and create a HTTP request and send it to Openweathermap.org API to get back the deatils in the form of a JSON Response.",
-      techStack: "HTML, CSS, JavaScript, Web-Pack",
-      live: "https://weather-js-delta.vercel.app",
-      source: "https://github.com/ticoniq/weatherJS",
+      title: "Wholelsale",
+      image: wholesale,
+      details: "",
+      // "weather web application made using HTML5, CSS3, and JavaScript. It's working process is simple. It takes the name of the City as input from the -user and create a HTTP request and send it to Openweathermap.org API to get back the deatils in the form of a JSON Response.",
+      techStack: "Vue, Tailwind css, Vuex, Laravel",
+      live: "https://wholesale.zazu.cloud/",
+      source: "#",
     },
     {
       id: 6,
-      title: "Budget Tracker",
-      image: budget,
-      details:
-        "Budget Tracker is a user-friendly mobile app that empowers individuals to take control of their personal finances. By tracking all transactions in one place, users get an always up-to-date overview of spending - enabling better decisions",
-      techStack: "Ruby, Rails, TailwindCSS, Rspec",
-      live: "https://budgetapp-y18o.onrender.com/",
-      source: "https://github.com/ticoniq/Budget-app",
+      title: "Cobben Motors",
+      image: cobben,
+      details: "",
+      // "Budget Tracker is a user-friendly mobile app that empowers individuals to take control of their personal finances. By tracking all transactions in one place, users get an always up-to-date overview of spending - enabling better decisions",
+      techStack: "Inertia, Vue, Vuex, Laravel",
+      live: "https://motors.cobben.co.ke/",
+      source: "#",
     },
   ]);
 
@@ -144,7 +147,8 @@ function Project() {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="mb-16 text-center text-newDarkGray dark:text-white">
+            className="mb-16 text-center text-newDarkGray dark:text-white"
+          >
             <h2 className="font-semibold text-4xl mb-3">Portfolio</h2>
             <p>Most recent work</p>
           </motion.article>
@@ -152,20 +156,30 @@ function Project() {
             {sortedProjects.map((item, index) => (
               <div className="" key={item.id}>
                 <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      width: "321px",
+                      height: "214px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <a onClick={() => openModal(index)}>
                     <div className="mask absolute inset-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)] text-newYellow" />
                   </a>
                 </div>
                 <h5
                   className="mb-4 text-lg font-bold cursor-pointer hover:text-newYellow dark:text-white dark:hover:text-newYellow"
-                  onClick={() => openModal(index)}>
+                  onClick={() => openModal(index)}
+                >
                   {item.title}
                 </h5>
                 {techStackToArray(item.techStack).map((tech, index) => (
                   <span
                     key={index}
-                    className="mr-2 my-1 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold">
+                    className="mr-2 my-1 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -175,7 +189,8 @@ function Project() {
                     href={item.source}
                     rel="noreferrer"
                     target="_blank"
-                    className="text-newDarkGray font-bold flex gap-1 hover:text-newYellow dark:text-white dark:hover:text-newYellow">
+                    className="text-newDarkGray font-bold flex gap-1 hover:text-newYellow dark:text-white dark:hover:text-newYellow"
+                  >
                     <CodeBracketIcon className="w-4" />
                     Source Code
                   </a>
@@ -183,7 +198,8 @@ function Project() {
                     href={item.live}
                     rel="noreferrer"
                     target="_blank"
-                    className="text-newDarkGray font-bold flex gap-1 dark:text-white hover:text-newYellow dark:hover:text-newYellow">
+                    className="text-newDarkGray font-bold flex gap-1 dark:text-white hover:text-newYellow dark:hover:text-newYellow"
+                  >
                     <EyeIcon className="w-4" />
                     Live Preview
                   </a>
@@ -206,7 +222,8 @@ function Project() {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="max-w-5xl bg-white dark:bg-neutral rounded-lg m-5">
+            className="max-w-5xl bg-white dark:bg-neutral rounded-lg m-5"
+          >
             <article className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <figure>
                 <img
@@ -233,7 +250,8 @@ function Project() {
                     (tech, index) => (
                       <span
                         key={index}
-                        className="mr-2 my-1 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold">
+                        className="mr-2 my-1 border-2 badge border-newbBlue badge-outline text-newbBlue font-semibold"
+                      >
                         {tech}
                       </span>
                     )
@@ -244,7 +262,8 @@ function Project() {
                     href={selectedProject.source}
                     rel="noreferrer"
                     target="_blank"
-                    className="text-newDarkGray font-bold flex gap-1 hover:text-newYellow dark:text-white dark:hover:text-newYellow">
+                    className="text-newDarkGray font-bold flex gap-1 hover:text-newYellow dark:text-white dark:hover:text-newYellow"
+                  >
                     <CodeBracketIcon className="w-4" />
                     Source Code
                   </a>
@@ -252,7 +271,8 @@ function Project() {
                     href={selectedProject.live}
                     rel="noreferrer"
                     target="_blank"
-                    className="text-newDarkGray font-bold flex gap-1 dark:text-white hover:text-newYellow dark:hover:text-newYellow">
+                    className="text-newDarkGray font-bold flex gap-1 dark:text-white hover:text-newYellow dark:hover:text-newYellow"
+                  >
                     <EyeIcon className="w-4" />
                     Live Preview
                   </a>
@@ -260,12 +280,14 @@ function Project() {
                 <div className="flex justify-between mt-6">
                   <button
                     onClick={prevProject}
-                    className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow">
+                    className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow"
+                  >
                     Previous
                   </button>
                   <button
                     onClick={nextProject}
-                    className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow">
+                    className="text-newDarkGray font-semibold dark:text-white hover:text-newYellow dark:hover:text-newYellow"
+                  >
                     Next
                   </button>
                 </div>
@@ -280,10 +302,11 @@ function Project() {
             Interested working with me?
           </h3>
           <a
-            href="mailto:okolietochi@gmail.com"
+            href="mailto:ertmigot@gmail.com"
             rel="noreferrer"
             target="_blank"
-            className="p-3 px-6 text-newDark font-bold bg-white rounded-md flex gap-1 hover:bg-transparent hover:text-white hover:border-2 hover:border-white">
+            className="p-3 px-6 text-newDark font-bold bg-white rounded-md flex gap-1 hover:bg-transparent hover:text-white hover:border-2 hover:border-white"
+          >
             <LiaEnvelopeSolid className="text-2xl" />
             Mail Me
           </a>

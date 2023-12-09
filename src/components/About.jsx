@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { LiaDownloadSolid } from "react-icons/lia";
-import pic from "../assets/images/about_migot.png";
+import pic from "../assets/images/new_pic.jpg";
 
 function About() {
   return (
