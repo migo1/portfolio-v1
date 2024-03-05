@@ -51,9 +51,6 @@ function About() {
               If you like what you see and have a project you need coded, don’t
               hesitate to contact me.
               <br />
-              {/* <br />
-              Email me <br />
-              <span className="font-semibold">tochi@tochidev.com</span> */}
               <div>
                 <a
                   href="https://docs.google.com/document/d/1tPp2xOwLtgLnCpWp2QPeBYpTXM_KvTTAqN_5tKVY-RE/edit?usp=sharing"
